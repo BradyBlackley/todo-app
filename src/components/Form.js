@@ -2,7 +2,6 @@ import React from 'react'
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
     const inputTextHandler = (e) => {
-        console.log(e.target.value);
         setInputText(e.target.value);
     };
 
@@ -13,8 +12,8 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
             ...todos, 
             {text: inputText, completed: false, id: Math.random() * 1000}
         ]);
-        setInputText("");
-    }
+        setInputText('');
+    };
     return(
         <form>
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
@@ -22,7 +21,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
                 Add
             </button>
             <div className="select">
-                <select name="todos" class="filter-todo">
+                <select name="todos" className="filter-todo">
                     <option value="all">All Tasks</option>
                     <option value="completed">Completed Tasks</option>
                     <option value="uncompleted">Uncompleted Tasks</option>
