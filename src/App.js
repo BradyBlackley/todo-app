@@ -11,10 +11,6 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  useEffect(() => {
-    filterHandler();
-  }, [todos, status]);
-
   const filterHandler = () => {
     switch(status){
       case 'completed':
@@ -28,6 +24,10 @@ function App() {
         break;
     }
   };
+
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
 
   return (
     <div>
