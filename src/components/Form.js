@@ -1,3 +1,5 @@
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
@@ -18,7 +20,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
         <form>
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                Add
+                <FontAwesomeIcon icon={faPlusCircle} />
             </button>
             <div className="select">
                 <select name="todos" className="filter-todo">

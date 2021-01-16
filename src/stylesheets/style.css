@@ -51,6 +51,7 @@
         color: white;
         border: none;
         height: 35px;
+        margin-right: 2px;
      }
 
      .edit {
@@ -74,7 +75,6 @@
         color: white;
         border: none;
         height: 35px;
-        margin-right: 2px;
      }
 
      html {
@@ -92,3 +92,24 @@
          justify-content: center;
          align-content: center;
      }
+
+     form button {
+         border: none;
+         background-color:rgba(0, 0, 0, 0.1);
+         color: white;
+         border-radius: 5px;
+     }
+
+     form input {
+         background-color:rgba(0, 0, 0, 0.1);
+         border-radius: 5px;
+         margin: 2px;
+     }
+
+     form select {
+        background-color:rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin: 2px;
+        color: white;
+     }
+
