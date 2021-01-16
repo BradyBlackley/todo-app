@@ -1,3 +1,94 @@
-.completed {
-    text-decoration: line-through;
-}
+    * {
+        box-sizing: border-box;
+    }
+    
+    .completed {
+        text-decoration: line-through;
+        background-color: rgba(0, 128, 0, 0.6);
+    }
+
+    .appTitle {
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 20%;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    }
+    ul {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+    }
+
+    .todo {
+        border: none;
+        display: flex;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.1);
+        list-style-type: none;
+        margin: 10px;
+        text-align: left;
+        color: white;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .todo li {
+        flex: 1;
+    }
+
+     .complete {
+        
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 1px;
+        float: right;
+        background-color: rgba(0, 128, 0, 0.5);
+        color: white;
+        border: none;
+        height: 35px;
+     }
+
+     .edit {
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 1px;
+        float: right;
+        background-color: rgba(0, 0, 255, 0.5);
+        color: white;
+        border: none;
+        height: 35px;
+        margin-right: 2px;
+      }
+     
+     .delete {
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 1px;
+        float: right;
+        background-color: rgba(255, 0, 0, 0.5);
+        color: white;
+        border: none;
+        height: 35px;
+        margin-right: 2px;
+     }
+
+     html {
+
+      background-image: url(../resources/background.jpg);
+      background-size: cover;
+      background-position: right bottom, left top;
+      background-repeat: no-repeat, repeat;
+      min-height: 100vh;
+
+     }
+
+     form {
+         min-height: 20px;
+         justify-content: center;
+         align-content: center;
+     }
