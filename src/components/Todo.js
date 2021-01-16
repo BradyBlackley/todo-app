@@ -24,6 +24,19 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         );
     };
 
+    const editHandler = (e) => {
+
+        setTodos(todos.map(item => {
+            if(item.id === todo.id){
+                return {
+                    ...item, text: e.target.value
+                }
+            }
+            return item;
+            })
+        );
+    };
+
     return(
             <div className="todo">
                 
@@ -31,7 +44,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 <button onClick={completeHandler} className="complete">
                     <FontAwesomeIcon icon={faCheckCircle} />
                 </button>
-                <button className="edit">
+                <button onClick={editHandler} className="edit">
                     <FontAwesomeIcon icon={faEdit} />
                 </button>
                 <button onClick={deleteHandler} className="delete">
