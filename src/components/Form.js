@@ -2,7 +2,7 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 
-const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
+const Form = ({ setInputText, todoItems, setTodoItems, inputText, setStatus }) => {
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
     };
@@ -10,8 +10,8 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     //TODO: install package to generate unique id's
     const submitTodoHandler = (e) => {
         e.preventDefault();
-        setTodos([
-            ...todos, 
+        setTodoItems([
+            ...todoItems, 
             {text: inputText, completed: false, id: Math.random() * 1000}
         ]);
         setInputText('');

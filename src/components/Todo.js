@@ -3,17 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../stylesheets/style.css';
 import { faCheckCircle, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const Todo = ({ text, todo, todos, setTodos }) => {
+const Todo = ({ text, todo, todoItems, setTodoItems, inputText, inputTextHandler }) => {
 
     const deleteHandler = () => {
 
-        setTodos(todos.filter((el) => el.id !== todo.id));
+        setTodoItems(todoItems.filter((el) => el.id !== todo.id));
 
     };
 
     const completeHandler = () => {
 
-        setTodos(todos.map(item => {
+        setTodoItems(todoItems.map(item => {
             if(item.id === todo.id){
                 return {
                     ...item, completed: !item.completed
@@ -24,17 +24,21 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         );
     };
 
-    const editHandler = (e) => {
+    const editHandler = () => {
 
-        setTodos(todos.map(item => {
-            if(item.id === todo.id){
-                return {
-                    ...item, text: e.target.value
+        let newText = prompt('Edit:');
+
+        if(newText != null){
+            setTodoItems(todoItems.map(item => {
+                if(item.id === todo.id){
+                    return {
+                        ...item, text: newText
+                    }
                 }
-            }
-            return item;
-            })
-        );
+                return item;
+                })
+            );
+        }
     };
 
     return(

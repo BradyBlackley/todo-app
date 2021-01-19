@@ -5,17 +5,18 @@
     .completed {
         text-decoration: line-through;
         background-color: rgba(0, 128, 0, 0.6);
+        border-radius: 5px;
     }
 
     .appTitle {
         text-align: center;
         border-radius: 5px;
         color: white;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         width: 20%;
         margin-right: auto;
         margin-left: auto;
-        box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
     }
     ul {
         width: 50%;
@@ -29,12 +30,12 @@
         display: flex;
         font-size: 25px;
         border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         list-style-type: none;
-        margin: 10px;
+        margin: 15px;
         text-align: left;
         color: white;
-        box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
     }
 
     .todo li {
@@ -79,7 +80,7 @@
 
      html {
 
-      background-image: url(../resources/background.jpg);
+      background-image: url(../resources/background3.jpg);
       background-size: cover;
       background-position: right bottom, left top;
       background-repeat: no-repeat, repeat;
@@ -98,17 +99,34 @@
          background-color:rgba(0, 0, 0, 0.1);
          color: white;
          border-radius: 5px;
+         height: 30px;
      }
 
      form input {
          background-color:rgba(0, 0, 0, 0.1);
          border-radius: 5px;
          margin: 2px;
+         height: 30px;
      }
 
      form select {
         background-color:rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin: 2px;
+        height: 30px;
+        border: none;
+     }
+
+     form select ::selection {
+        background-color:rgba(0, 0, 0, 0.1);
+     }
+
+     .todo-input {
+         border: none;
+         color: white;
+     }
+
+     .filter-todo {
+         color: white;
      }
 

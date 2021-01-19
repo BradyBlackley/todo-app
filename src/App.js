@@ -7,27 +7,27 @@ import './stylesheets/style.css';
 function App() {
   
   const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todoItems, setTodoItems] = useState([]);
   const [status, setStatus] = useState("all");
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  const [filteredTodoItems, setFilteredTodoItems] = useState([]);
 
   useEffect(() => {
     function filterHandler() {
       switch (status) {
         case 'completed':
-          setFilteredTodos(todos.filter(todo => todo.completed === true));
+          setFilteredTodoItems(todoItems.filter(todo => todo.completed === true));
           break;
         case 'uncompleted':
-          setFilteredTodos(todos.filter(todo => todo.completed === false));
+          setFilteredTodoItems(todoItems.filter(todo => todo.completed === false));
           break;
         default:
-          setFilteredTodos(todos);
+          setFilteredTodoItems(todoItems);
           break;
       }
     }
 
     filterHandler();
-  }, [todos, status]);
+  }, [todoItems, status]);
 
   return (
     <div>
@@ -36,16 +36,16 @@ function App() {
         <Form 
           inputText = {inputText}
           setInputText={setInputText} 
-          todos={todos} 
-          setTodos={setTodos}
+          todoItems={todoItems} 
+          setTodoItems={setTodoItems}
           setStatus={setStatus} 
         />
       </header>
         
         <TodoList 
-        setTodos={setTodos} 
-        todos={todos}
-        filteredTodos={filteredTodos}
+        setTodoItems={setTodoItems} 
+        todoItems={todoItems}
+        filteredTodoItems={filteredTodoItems}
         />
     </div>
   );
